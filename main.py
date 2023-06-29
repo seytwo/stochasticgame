@@ -24,13 +24,13 @@ def main():
   name_to_pokemon = tuple( { pokemon.name: pokemon 
     for pokemon in pokemons[i] } for i in range(sg.N_PLAYER) )
 
-  n_hp = 2
+  n_hp = 4
   game = pkg.PokemonGame(pokemons, n_hp=n_hp)
   game.initialize()
   game.load_result('hp='+str(n_hp)+'.json')
 
-  ValueIteration().solve(game)
-  game.save_result('hp='+str(n_hp)+'.json')
+  # ValueIteration().solve(game)
+  # game.save_result('hp='+str(n_hp)+'.json')
 
   heads = (
     name_to_pokemon[0]['サザンドラ'], 
